@@ -1,0 +1,32 @@
+body {
+    background: url(download3.jpg);
+    color: rgb(255, 47, 47);
+    font-family: 'Press Start 2P', cursive;
+}
+
+button {
+    background-color: rgb(255, 47, 47);
+    border-color: #e23003;
+    font-size: 20px;
+    padding: 10px;
+    
+}
+
+label { padding-top: 30px;
+
+}
+
+h1 {
+    padding-left: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 60px;
+}
+
+#add-movie {
+    background-color: rgb(255, 47, 47);
+    border-color: #e23003;
+    font-size: 17px;
+    padding: 10px;
+    
+}
