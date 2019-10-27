@@ -4,8 +4,6 @@ var movies = ["The Godfather", "12 Angry Men", " Pulp Fiction", "The Matrix", "L
 
 var apikey = "5sAdRPYmPRjCwe9qHB5LstWj4B7mYLAy"
 
-// var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + APIkey;
-//var queryURLBase = "https://api.giphy.com/v1/stickers/search?api_key=5sAdRPYmPRjCwe9qHB5LstWj4B7mYLAy&q=tv shows&limit=25&offset=0&rating=G&lang=en"
 
 // displayMovieInfo function re-renders the HTML to display the appropriate content
 function displayMovieInfo() {
@@ -26,7 +24,7 @@ function displayMovieInfo() {
         // Deletes the movies prior to adding new movies
         // (this is necessary otherwise you will have repeat buttons)
         $("#movies-view").empty();
-        // $("#movies-view").empty(response);
+
 
 
         // storing the data from the AJAX request in the results variable
@@ -45,8 +43,7 @@ function displayMovieInfo() {
             let movieImage = $("<img>");
             // movieImage.addClass("gif");
 
-            // movieImage needs data-still and data-animate and data-state
-            // event delegation !!!
+
             // Setting the src attribute of the image to a property pulled off the result item
             movieImage.attr("src", results[i].images.fixed_height_still.url);
             movieImage.attr("data-still", results[i].images.fixed_height_still.url);
@@ -62,23 +59,7 @@ function displayMovieInfo() {
         }
 
     })
-    // .then(function () {
-    //     $(".gif").on("click", function () {
-    //         // $("#movies-view").on("click", ".gif", function () {
-    //         // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
-    //         var state = $(this).attr("data-state");
-    //         // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-    //         // Then, set the image's data-state to animate
-    //         // Else set src to the data-still value
-    //         if (state === "still") {
-    //             $(this).attr("src", $(this).attr("data-animate"));
-    //             $(this).attr("data-state", "animate");
-    //         } else {
-    //             $(this).attr("src", $(this).attr("data-still"));
-    //             $(this).attr("data-state", "still");
-    //         }
-    //     });
-    // })
+
 }
 
 // $(".gif").on("click", function () {
